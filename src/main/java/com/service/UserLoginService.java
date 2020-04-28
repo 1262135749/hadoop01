@@ -2,6 +2,7 @@ package com.service;
 
 import com.dao.UserLoginDao;
 import com.pojo.User;
+import com.pojo.UserLogin;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,7 +13,7 @@ public class UserLoginService {
     private UserLoginDao userLoginDao;
 
 
-    public User login(User user){
-        return userLoginDao.login(user);
+    public User login(UserLogin userLogin){
+        return userLoginDao.login(userLogin);
     }
 }

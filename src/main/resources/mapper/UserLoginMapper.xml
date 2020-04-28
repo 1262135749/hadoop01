@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.dao.UserLoginDao">
-    <select id="login" parameterType="User" resultType="User">
-        select *
-        from user_login ul
-        where ul.login_name = #{loginName} and ul.login_pass = #{loginPass}
+    <select id="login" parameterType="UserLogin" resultType="User">
+        select u.*
+        from user_login ul,user u
+        where ul.login_name = #{loginName} and ul.login_pass = #{loginPass} and ul.user_id = u.user_id
     </select>
 </mapper>

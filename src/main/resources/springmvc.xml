@@ -15,8 +15,8 @@
 		http://www.springframework.org/schema/tx/spring-tx-3.2.xsd ">
 		
 		<!-- 扫描handler -->
-		<context:component-scan base-package="com.hy.controller"/>
-		<context:component-scan base-package="com.hy.exception"/>
+		<context:component-scan base-package="com.controller"/>
+		<!--<context:component-scan base-package="com.exception"/>-->
 		
 		<!-- 注解的处理器映射器和处理器适配器 -->
 		<mvc:annotation-driven/>
